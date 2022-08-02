@@ -1,0 +1,27 @@
+
+.App-header {
+  background-color: #282c34;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.main{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1260px){
+  .main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+
