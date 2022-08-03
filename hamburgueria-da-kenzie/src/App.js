@@ -35,7 +35,7 @@ function App() {
 
   function filtrarProdutos(valor){
     
-    const resultado = products.filter((el) => el.category.toUpperCase().includes(valor.toUpperCase())) 
+    const resultado = products.filter((el) => el.category.toUpperCase().includes(valor.toUpperCase()) || el.name.toUpperCase().includes(valor.toUpperCase())) 
 
     return setFilteredProducts(resultado)
   }
