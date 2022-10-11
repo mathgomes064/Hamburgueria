@@ -21,7 +21,6 @@ function ProductsList({products, currentSale, setCurrentSale, filteredProducts})
                 <ul className='productContainer'>
                     {
                     filteredProducts.length > 0 ?
-
                      (filteredProducts.map((product) => (
                         <li key={product.id} className='productCard'>
                             <div className='divDaImagem'>

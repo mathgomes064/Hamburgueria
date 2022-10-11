@@ -23,10 +23,14 @@ function App() {
     setCurrentSale(filter)
   }
 
+  // function excluirTodos(){
+  //   while(currentSale.length){
+  //     currentSale.pop()
+  //   }
+  // }
+
   function excluirTodos(){
-    while(currentSale.length){
-      currentSale.pop()
-    }
+    return setCurrentSale([])
   }
   
   const somaTotal = currentSale.reduce((valorAnterior, valorAtual) => {
@@ -45,7 +49,7 @@ function App() {
     .then((response) => response.json())
     .then((response) => {setProducts(response)})
     .catch((err) => console.log(err));
-  }, [products])
+  }, [])
 
   return (
     <>
@@ -62,7 +66,8 @@ function App() {
             <Cart currentSale={currentSale}
                   excluirProduto={excluirProduto}
                   somaTotal={somaTotal}
-                  excluirTodos={excluirTodos}/>
+                  excluirTodos={excluirTodos}
+                  />
           </main>
     </div>
     
